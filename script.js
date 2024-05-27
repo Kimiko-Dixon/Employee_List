@@ -6,6 +6,7 @@ const collectEmployees = function() {
 
   let isAddEmployee = true;
 
+  // Check if the salary is a number
    const validSalary = function(inputSalary)
     {
       if (isNaN(inputSalary))
@@ -16,6 +17,7 @@ const collectEmployees = function() {
       return parseInt(inputSalary);
     }
 
+    // Create an employee object
     const Employee = function(firstName, lastName, salary)
     {
         this.firstName = firstName;
@@ -23,19 +25,24 @@ const collectEmployees = function() {
         this.salary = validSalary(salary);
     }
   
+  // Array to hold the list of employee information
   const employeesArray = [];
 
+  //Create a new employee object
   while(isAddEmployee)
   {
     
+    // Assign values to the properties
     const firstName = prompt("Enter First Name: ");
     const lastName = prompt("Enter Last Name: ");
     const salary = (prompt("Enter Salary: "));
 
     const employee = new Employee(firstName, lastName, salary);
 
+    // Add employee object to the array
     employeesArray.push(employee);
 
+    // Continuation condition
     isAddEmployee = window.confirm("Do you want to add another employee?");
   }
 
@@ -47,13 +54,17 @@ const collectEmployees = function() {
 const displayAverageSalary = function(employeesArray) {
   
   let sum = 0;
+
+  // Add salaries together
   for (const employee of employeesArray)
   {
     sum += employee.salary;
   }
 
+  // Calculate average
   const average = sum / employeesArray.length;
 
+  // Display salary rounded 2 decimal places
   console.log(`The average employee salary between out ${employeesArray.length} employee(s) is $${average.toFixed(2)}`);
 
 }
@@ -61,7 +72,10 @@ const displayAverageSalary = function(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
 
+  // Generate a random number as the index
   const pickedEmployee = Math.floor(Math.random() * employeesArray.length);
+
+  // Display the employee's name at the random index
   console.log(`Congratulations to ${employeesArray[pickedEmployee].firstName} ${employeesArray[pickedEmployee].lastName}, our random drawing winner! `)
 }
 
