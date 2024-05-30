@@ -8,8 +8,8 @@ This webpage allows an employer to log a list of their employee's names and sala
 
 To use this webpage, click on the "Add Employees" button. You will be prompted for the first name, last name, and salary of an employee, then asked if you would like to add another employee. If you choose not to add another employee, they will be displayed on the webpage chart in alphabetical order. In the console the average salary and the drawing winner will be displayed.
 
-![Screenshot](./Assets/Salary-Screenshot.PNG)
-[Deployed Application](https://kimiko-dixon.github.io/Modual_3_challenge/)
+![Screenshot](./Assets/images/Salary-Screenshot.PNG)
+[Deployed Application](https://kimiko-dixon.github.io/Employee_List/)
 
 ## Credits
 
